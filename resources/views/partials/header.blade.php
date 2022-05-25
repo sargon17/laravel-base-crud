@@ -1,7 +1,7 @@
    <header class="header">
       <div class="header--content">
         <div class="header__logo-wrapper">
-            <a href="/">
+            <a href="/comics">
                 <img src="/assets/dc-logo.png" alt="dc logo" />
             </a>
         </div>
