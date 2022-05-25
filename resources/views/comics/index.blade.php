@@ -3,7 +3,7 @@
 @section("content")
            @foreach($comics as $comicIndex => $comic)
             <div class="main__card">
-              <a href="/detail/{{$comicIndex}}">
+              <a href="/comics/{{$comic['id']}}">
                 <div class="main__card-image">
                   <img src="{{ $comic['image'] }}" alt="">
                 </div>
