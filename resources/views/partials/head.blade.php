@@ -7,7 +7,4 @@
     <link rel="stylesheet" href="/css/app.css">
     <title>Comics</title>
 </head>
-<body>
 
-</body>
-</html>
