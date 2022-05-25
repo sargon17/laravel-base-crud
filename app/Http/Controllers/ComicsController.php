@@ -15,7 +15,14 @@ class ComicsController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view("comics.index", compact("comics"));
+        $nav = config("nav");
+        $footerNav = config("footerNav");
+        $social = config("social");
+        $bannerData = config("bannerData");
+        return view(
+            "comics.index",
+            compact(["comics", "nav", "footerNav", "social", "bannerData"])
+        );
     }
 
     /**
