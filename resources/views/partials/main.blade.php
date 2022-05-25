@@ -18,6 +18,7 @@
               </a>
             </div>
           @endforeach --}}
+          @yield("content")
         </div>
         <div class="main-content__btn-wrapper">
           <button>Load More</button>

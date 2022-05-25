@@ -1,12 +1,12 @@
+<body>
 @include("../partials/head")
 @include("../partials/header")
 @include("../partials/main")
 @include("../partials/banner")
 @include("../partials/footer")
-<body>
-    <div class="container">
+    {{-- <div class="container">
         @yield("content")
-    </div>
+    </div> --}}
 
 </body>
 </html>
