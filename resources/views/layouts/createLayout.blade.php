@@ -11,7 +11,7 @@
         </div>
         <div class="section-form">
             <div class="container">
-                <form action="/create" method="POST">
+                <form action="{{ route('comics.store')}}" method="POST">
                     @csrf
                     <div class="form-group">
                         <div class="row">
