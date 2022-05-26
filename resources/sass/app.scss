@@ -193,4 +193,14 @@ a {
             color: #fff;
         }
     }
+    &-danger {
+        background: #f6f6f6;
+        color: #e61717;
+        border: #e61717 solid 1px;
+
+        &:hover {
+            background: #e61717;
+            color: #fff;
+        }
+    }
 }

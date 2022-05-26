@@ -264,3 +264,44 @@
         }
     }
 }
+.overlay-delete-message {
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    .overlay-delete-message__wrapper {
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+        transition: all 0.3s ease-in-out;
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #003f5e;
+            padding-bottom: 1.5rem;
+        }
+        .row {
+            width: 400px;
+            margin: 0 auto;
+        }
+    }
+}
+.show {
+    top: 0;
+    .overlay-delete-message__wrapper {
+        background: rgba(255, 255, 255, 0.975);
+    }
+}
