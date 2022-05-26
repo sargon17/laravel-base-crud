@@ -20,8 +20,14 @@
           @endforeach --}}
           @yield("content")
         </div>
-        <div class="main-content__btn-wrapper">
-          <button>Load More</button>
+        <div class="row jc-center">
+            <div class="col-3">
+                <a href="comics/create">
+                    <div class="btn btn-primary">
+                        Add new comics
+                    </div>
+                </a>
+            </div>
         </div>
       </div>
     </div>
