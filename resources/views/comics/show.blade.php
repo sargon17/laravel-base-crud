@@ -1,5 +1,10 @@
 @extends('layouts.showLayout')
 
+
+@section('id')
+    {{$comic['id']}}
+@endsection
+{{--------------------------------------------------------------------------}}
 @section('title')
     {{$comic['title']}}
 @endsection
