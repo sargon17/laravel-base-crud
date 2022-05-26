@@ -19380,6 +19380,20 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+var deleteBtn = document.querySelector("#delete-btn");
+var overlayMenu = document.querySelector("#overlay-delete-message");
+var cancelBtn = document.querySelector("#delete-btn-cancel");
+deleteBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  overlayMenu.classList.add("show");
+});
+cancelBtn.addEventListener("click", function (e) {
+  overlayMenu.classList.remove("show");
+});
+overlayMenu.addEventListener("wheel", function (e) {
+  e.preventDefault();
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
