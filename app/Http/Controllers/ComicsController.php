@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comic;
+use App\User;
 
 class ComicsController extends Controller
 {
@@ -49,12 +50,12 @@ class ComicsController extends Controller
         $data = $request->all();
 
         $comic = new Comic();
-        $comic->title = $data["title"] ?? "";
-        $comic->description = $data["description"] ?? "";
-        $comic->image = $data["image"] ?? null;
-        $comic->price = $data["price"];
-        $comic->series = $data["series"] ? $data["series"] : "";
-        $comic->sale_date = $data["sale_date"] ?? null;
+        $comic->title = $data["title"];
+        $comic->description = $data["description"] ?? "null";
+        $comic->image = $data["image"];
+        $comic->price = $data["price"] ?? 0.0;
+        $comic->series = $data["series"] ?? "unknown";
+        $comic->sale_date = $data["sale_date"] ?? "2016-07-01";
         $comic->save();
 
         return redirect()->route("comics.show", ["comic" => $comic->id]);
@@ -85,9 +86,15 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
-        //
+        $nav = config("nav");
+        $footerNav = config("footerNav");
+        $social = config("social");
+        return view(
+            "comics.edit",
+            compact(["comic", "nav", "footerNav", "social"])
+        );
     }
 
     /**
@@ -97,9 +104,13 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->update($data);
+
+        return redirect()->route("comics.show", ["comic" => $comic->id]);
     }
 
     /**
