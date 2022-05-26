@@ -11,7 +11,7 @@
                 @foreach ( $menu['links'] as $item )
               <li
                 class="footer-top__content__nav-item">
-                <a href="{{$item['url']}}">{{$item['title']}}</a>
+                <a class="footer-link" href="{{$item['url']}}">{{$item['title']}}</a>
               </li>
               @endforeach
 
