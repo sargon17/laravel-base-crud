@@ -4,7 +4,7 @@
 @section('id')
 
     {{$comic['id']}}
-    @endsection
+@endsection
 
 @section('title')
     {{$comic['title'] ?? ''}}
