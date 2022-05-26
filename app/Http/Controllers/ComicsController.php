@@ -32,7 +32,10 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        //
+        $nav = config("nav");
+        $footerNav = config("footerNav");
+        $social = config("social");
+        return view("comics.create", compact(["nav", "footerNav", "social"]));
     }
 
     /**
