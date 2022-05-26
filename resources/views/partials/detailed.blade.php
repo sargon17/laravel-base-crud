@@ -17,6 +17,18 @@
         </div>
         <div class="top-container__content-section__wrapper">
             <div class="container">
+                <div class="row jc-end">
+                    <div class="col-1">
+                        <button class="btn btn-danger" id="delete-btn" >Delete</button>
+                    </div>
+                    <div class="col-1">
+                        <a href="/comics/{{$comic['id']}}/edit">
+                        <div class="btn btn-primary">
+                            <p>EDIT</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
                 <div class="top-container__content-section">
                     <div class="top-container__content">
                         <h1> @yield('title') </h1>
@@ -123,3 +135,18 @@
         </div>
     </div>
 </section>
+<div class="overlay-delete-message " id="overlay-delete-message">
+    <div class="overlay-delete-message__wrapper">
+        <h2>Are you sure you want to delete this comic?</h2>
+        <div class="row">
+            <form class="col-12" action="{{ route('comics.destroy' , $comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger" id="delete-btn-delete">Delete</button>
+            </form>
+            <div class="col-12">
+                <button type="submit" value="cancel" class="btn btn-primary" id="delete-btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
