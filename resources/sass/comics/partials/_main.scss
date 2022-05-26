@@ -31,21 +31,6 @@
         &__btn-wrapper {
             padding: 20px 20px;
             text-align: center;
-            button {
-                background: #0282f9;
-                color: white;
-                border: 1px solid #0282f9;
-                padding: 0.5em 3em;
-                font-size: 0.8rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                &:hover {
-                    background: #fff;
-                    color: #0282f9;
-                }
-            }
         }
     }
     &__cards-list {
